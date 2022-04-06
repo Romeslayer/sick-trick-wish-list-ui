@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Tricks from '../Tricks/Tricks.js';
+import Form from '../Form/Form.js';
 import getData from '../../apiCalls';
 import './App.css';
 
@@ -28,14 +29,14 @@ class App extends Component {
   render() {
     let tricks = '';
 
-    if(this.state.tricks) {
-
+    if (this.state.tricks) {
       tricks = <Tricks tricks={this.state.tricks} />
     }
 
     return (
       <div className="App">
         <h1>Sick Trick Wish List</h1>
+        <Form />
         {tricks}
       </div>
     );
