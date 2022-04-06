@@ -24,6 +24,11 @@ describe('Sick Trick Wish List',() => {
         .get('#link').type('https://www.youtube.com/watch?v=-73chmC1rkI').should('have.value', 'https://www.youtube.com/watch?v=-73chmC1rkI')
         .get('input[type=submit]').click()
 
-        .get('.trick-section').contains('Regular Boogie')
+        .get('.trick-section')
+          .contains('Regular Boogie')
+        .get('.trick-section')
+          .contains('Flatground')
+        .get('.trick-section')
+          .contains('https://www.youtube.com/watch?v=-73chmC1rkI')
   })
 })
