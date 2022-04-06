@@ -26,6 +26,7 @@ class Form extends Component {
       id: this.props.tricks.length + 1,
       name: this.state.name ,
       stance: this.state.stance ,
+      obstacle: this.state.obstacle,
       tutorial: this.state.link
     }
     this.props.addTrick(trick);
