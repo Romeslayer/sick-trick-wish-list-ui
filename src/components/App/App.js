@@ -26,6 +26,10 @@ class App extends Component {
       })
       .catch(error => console.log(error))
   }
+
+  addTrick = (trick) => {
+    this.setState({tricks: [...this.state.tricks, trick]})
+  }
   render() {
     let tricks = '';
 
@@ -36,7 +40,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Sick Trick Wish List</h1>
-        <Form />
+        <Form addTrick={this.addTrick} tricks={this.state.tricks} />
         {tricks}
       </div>
     );
