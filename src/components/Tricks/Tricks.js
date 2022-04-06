@@ -3,10 +3,9 @@ import './Tricks.css';
 
 const Tricks = ({tricks}) => {
   const cards = [];
-  console.log(tricks)
   tricks.forEach(trick => {
     cards.push(
-      <div className="card">
+      <div className="card" key={trick.id}>
         <p>{trick.stance} {trick.name}</p>
         <p>Obstacle: {trick.obstacle}</p>
         <p> Link to Tutorial: </p>
